@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-from model import convert, predict
+from backend.app.api.model import convert, predict
 
 app = FastAPI()
 
