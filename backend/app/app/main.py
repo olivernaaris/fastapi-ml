@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-from backend.app.api.model import convert, predict
+from app.model import convert, predict
 
 app = FastAPI()
 
@@ -26,7 +26,7 @@ async def pong():
 
 
 @app.post("/predict", response_model=StockOut, status_code=200)
-def get_prediction(payload: StockIn):
+async def get_prediction(payload: StockIn):
     ticker = payload.ticker
 
     prediction_list = predict(ticker)

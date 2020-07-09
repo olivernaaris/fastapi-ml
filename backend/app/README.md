@@ -6,18 +6,16 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
 
 ## Want to use this project?
 
-1. Fork/Clone
-
-1. Create and activate a virtual environment:
-
-    ```sh
-    $ python3 -m venv venv && source venv/bin/activate
-    ```
-
 1. Install the requirements:
 
     ```sh
-    (venv)$ pip install -r requirements.txt
+       poetry install
+    ```
+
+1. Spawn shell with virtual environment:
+
+    ```sh
+       poetry shell
     ```
 
 1. Train the model:
@@ -27,6 +25,9 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
 
     >>> from model import train, predict, convert
     >>> train()
+    >>> train("GOOG")
+    >>> train("AAPL")
+    >>> train("^GSPC")
     ```
 
 1. Run the app:
