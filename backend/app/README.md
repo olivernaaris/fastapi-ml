@@ -23,11 +23,14 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
     ```sh
     (venv)$ python
 
-    >>> from model import train, predict, convert
-    >>> train()
-    >>> train("GOOG")
-    >>> train("AAPL")
-    >>> train("^GSPC")
+    >>> from app.machine_learning.model import convert, PredictStocks
+    >>> obj = PredictStocks()
+    >>> obj.train()
+    >>> obj.train("GOOG")
+    >>> obj.train("AAPL")
+    >>> obj.train("^GSPC")
+    >>> prediction_list = obj.result
+    >>> convert(prediction_list)
     ```
 
 1. Run the app:
