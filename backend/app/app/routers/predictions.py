@@ -11,7 +11,7 @@ async def pong():
 
 
 async def _get_prediction(ticker):  # A function defined by async def is a native coprocess object
-    return PredictStocks(ticker)
+    return PredictStocks(ticker)    # See - https://programmer.ink/think/latest-python-asynchronous-programming-explanation.html
 
 
 @router.post("/predict", response_model=StockOut, status_code=200)
