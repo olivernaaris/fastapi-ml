@@ -33,7 +33,7 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
 1. Run the app:
 
     ```sh
-    (venv)$ uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8008
+    (venv)$ uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
     ```
 
 1. Test:
@@ -43,5 +43,5 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
       --header "Content-Type: application/json" \
       --request POST \
       --data '{"ticker":"MSFT"}' \
-      http://localhost:8008/predict
+      http://localhost:8000/predict
     ```
