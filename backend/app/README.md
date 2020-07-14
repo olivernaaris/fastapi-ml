@@ -46,5 +46,5 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
       --header "Content-Type: application/json" \
       --request POST \
       --data '{"ticker":"MSFT"}' \
-      http://localhost:8000/predict
+      http://localhost:8000/api/predict
     ```

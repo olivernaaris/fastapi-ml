@@ -5,11 +5,6 @@ from app.models.payload import StockIn, StockOut
 router = APIRouter()
 
 
-@router.get("/ping")
-async def pong():
-    return {"ping": "pong!"}
-
-
 async def _get_prediction(ticker):  # A function defined by async def is a native coprocess object
     return PredictStocks(ticker)    # See - https://programmer.ink/think/latest-python-asynchronous-programming-explanation.html
 
