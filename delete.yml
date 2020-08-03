@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Delete Python app.
+      k8s:
+        definition: '{{ item }}'
+        kubeconfig: '{{ k8s_kubeconfig }}'
+        state: absent
+      loop:
+        - "{{ lookup('template', 'kubernetes-templates/fastapi-ml-deployment.yml') | from_yaml_all | list }}"
+        - "{{ lookup('template', 'kubernetes-templates/fastapi-ml-service.yml') | from_yaml_all | list }}"

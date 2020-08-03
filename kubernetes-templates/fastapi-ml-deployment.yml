@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-ml
+  namespace: default
+  labels:
+    app: fastapi-ml
+    tier: backend
+spec:
+  selector:
+    matchLabels:
+      app: fastapi-ml
+      tier: backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: fastapi-ml
+        tier: backend
+    spec:
+      containers:
+      - name: fastapi-ml-backend
+        image: fastapi-ml-backend:latest
+        command: ["uvicorn"]
+        args: ["app.main:app", "--reload", "--workers", "1", "--host", "0.0.0.0", "--port", "80"]
+        imagePullPolicy: Never
+        ports:
+          - name: http
+            containerPort: 80

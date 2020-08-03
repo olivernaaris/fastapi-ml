@@ -12,13 +12,13 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
        poetry install
     ```
 
-1. Spawn shell with virtual environment:
+2. Spawn shell with virtual environment:
 
     ```sh
        poetry shell
     ```
 
-1. Train the model:
+3. Train the model:
 
     ```sh
     (venv)$ python
@@ -33,13 +33,13 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
     >>> convert(prediction_list)
     ```
 
-1. Run the app:
+4. Run the app:
 
     ```sh
     (venv)$ uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
     ```
 
-1. Test:
+5. Test:
 
     ```sh
     $ curl \
@@ -48,3 +48,11 @@ Check out the [post](https://testdriven.io/blog/fastapi-machine-learning).
       --data '{"ticker":"MSFT"}' \
       http://localhost:8000/api/predict
     ```
+
+6. Check API docs
+    http://localhost:8000/docs#/
+
+7. Check if service heartbeat is working
+    ```sh
+   $ curl http://localhost:8000/api/heartbeat
+   ```
