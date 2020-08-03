@@ -4,6 +4,7 @@
     <option name="poetryVirtualenvPaths">
       <set>
         <option value="$USER_HOME$/Library/Caches/pypoetry/virtualenvs/app-iIDRCEQE-py3.7/bin/python" />
+        <option value="$USER_HOME$/Library/Caches/pypoetry/virtualenvs/fastapi-ml-sFXyGB4v-py3.7/bin/python" />
       </set>
     </option>
   </component>
