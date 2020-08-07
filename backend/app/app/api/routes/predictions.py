@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from app.machine_learning.model import convert, PredictStocks
-from app.models.payload import StockIn, StockOut
+from app.schemas.payload import StockIn, StockOut
 
 router = APIRouter()
 

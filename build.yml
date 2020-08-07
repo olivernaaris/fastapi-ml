@@ -3,7 +3,7 @@
   gather_facts: false
 
   tasks:
-    - name: Build backend image
+    - name: Build backend image.
       docker_image:
         build:
           path: ./backend
