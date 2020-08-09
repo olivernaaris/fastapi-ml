@@ -67,3 +67,15 @@ Modify or add SQLAlchemy models in `./backend/app/app/models/`, Pydantic schemas
 Add and modify tasks to the Celery worker in `./backend/app/app/worker.py`.
 
 If you need to install any additional package to the worker, add it to the file `./backend/app/celeryworker
+
+### Backend tests
+
+To test the backend run:
+
+```console
+$ sh ./scripts/test.sh
+```
+
+The file `./scripts/test.sh` has the commands to trigger tests inside the container.
+
+The tests run with Pytest, modify and add tests to `./backend/app/app/tests/`.
