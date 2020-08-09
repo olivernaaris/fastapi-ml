@@ -66,4 +66,4 @@ Modify or add SQLAlchemy models in `./backend/app/app/models/`, Pydantic schemas
 
 Add and modify tasks to the Celery worker in `./backend/app/app/worker.py`.
 
-If you need to install any additional package to the worker, add it to the file `./backend/app/celerywor
+If you need to install any additional package to the worker, add it to the file `./backend/app/celeryworker

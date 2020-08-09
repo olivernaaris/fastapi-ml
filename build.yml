@@ -2,6 +2,9 @@
 - hosts: localhost
   gather_facts: false
 
+  vars_files:
+    - "vars/{{ environment }}/main.yml"
+
   tasks:
     - name: Build backend image.
       docker_image:
@@ -9,8 +12,12 @@
           path: ./backend
           dockerfile: backend.dockerfile
           pull: yes
+          rm: yes
+          args:
+            INSTALL_DEV: "{{ install_dev_dependencies }}"
         name: fastapi-ml-backend
         tag: latest
         push: no
         source: build
+        force_source: yes
         debug: yes

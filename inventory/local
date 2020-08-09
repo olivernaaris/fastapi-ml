@@ -1,8 +1,8 @@
 [all:vars]
 ansible_python_interpreter=/Library/Frameworks/Python.framework/Versions/3.7/bin//python3
-# Kubernetes settings.
-k8s_kubeconfig=~/.kube/config
-k8s_no_log=true
+
+# environment variable - change based on environment
+environment=local
 
 [local]
-127.0.0.1  ansible_connection=local
+127.0.0.1 ansible_connection=local

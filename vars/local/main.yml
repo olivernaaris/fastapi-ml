@@ -1,0 +1,5 @@
+# Kubernetes settings.
+k8s_kubeconfig: ~/.kube/config
+k8s_no_log: true
+
+install_dev_dependencies: true
